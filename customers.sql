@@ -1,6 +1,7 @@
 SELECT customer_id
 ,name
 ,email
+
 ,min(created_at) as first_order_at
 ,count(*) as number_of_orders
 FROM `analytics-engineers-club.coffee_shop.orders`
