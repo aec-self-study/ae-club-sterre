@@ -1,0 +1,16 @@
+version: 2
+ 
+models:
+  - name: customers
+    description: "{{ doc('lorem_ipsum') }}"
+    columns:
+      - name: customer_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
+
+
+
+
+
