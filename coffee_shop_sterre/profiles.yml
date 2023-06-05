@@ -1,0 +1,13 @@
+coffee_shop_sterre:
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: aec-students
+      schema: dbt_SterrevanderPoll
+      threads: 8
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      retries: 1
+  target: dev
