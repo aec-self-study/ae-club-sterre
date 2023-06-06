@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+)}}
+
 select customer_id, count(distinct visitor_id)
   from {{ source('web_tracking', 'pageviews') }} as pageviews
 where customer_id is not null
